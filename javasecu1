@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class S1 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Ingrese el monto del prestamo: ");
+        double monto = entrada.nextDouble();
+
+        System.out.print("Ingrese la tasa mensual (%): ");
+        double tasa = entrada.nextDouble();
+
+        System.out.print("Ingrese el numero de meses: ");
+        int meses = entrada.nextInt();
+
+        double interes = monto * (tasa / 100) * meses;
+        double cuota = (monto + interes) / meses;
+
+        System.out.println("Interes total: " + interes);
+        System.out.println("Cuota mensual: " + cuota);
+
+        entrada.close();
+    }
+}
